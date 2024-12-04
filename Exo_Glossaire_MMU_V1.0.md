@@ -15,134 +15,248 @@
 ## Général
 
 1. Quel est l’environnement à installer pour exécuter un script PHP ? Citer 2 exemples de logiciels permettant ce contexte
+    - Le package Laragon permet d'executer des scripts PHP.
+
 2. Qu’est-ce qu’un algorithme ?
-   - Une suite d'instructions qu'une machine doit effectuer.
+   - Une suite d'instructions à effectuer dans un ordre précis.
+
 3. Qu’est-ce qu’une variable ? Par quel symbole est préfixée une variable en PHP ?
    - Une valeur affectée à [un mot?]. Elle peut être de plusieurs types (string, int, bool).
      Sur PHP une variable est préfixée de '$'.
+
 4. Qu’est-ce que la portée d’une variable ?
+    - Cela indique si elle est accessible en dehors du bloc dans lequel elle a été déclarée. Cela dépend de comment elle a été déclarée, de sa position et de sa portée.
+
 5. Qu’est-ce qu’une constante ? Quelle est la différence avec une variable ?
    - Tout comme une variable une constante est une valeur associée à un libellé, sauf qu'elle ne peut pas changer de valeur, d'où son nom.
+
 6. Qu’est-ce qu’une superglobale, combien en existent-ils et donner un exemple d’utilisation
+    - C'est une variable qui est toujours accessible. Il en existe 9 ($_SERVER, $_GET, $_POST, $_FILES, $_COOKIE, $_SESSION, $_ENV, $_REQUEST, $_GLOBALS). (ex: $_POST pour retrouver le contenu d'un post)
+
 7. Quels sont les différents types (primitifs) que l’on peut associer à une variable en PHP ? Les citer et en donner des exemples (ne pas oublier le type d’une variable sans valeur)
+    - string (chaîne de charactères)
+    - int (nombre entier)
+    - float (nombre décimal)
+    - char (charactère)
+    - bool (vrai/faux)
+    - null (rien)
+
 8. Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
    - Il y a les tableaux simples, avec seulement des valeurs => array(10, 12, 8) et les tableaux associant une valeur à une clé array => ["Mickaël" => "FRA", "Virgile" => "ESP"]
+
 9. Quelles sont les différentes structures de contrôles qu’il existe en algorithmie ? Donner un exemple pour chacune d’entre elles
+    - Séquences : (bloc de code?)
+    - Sélections : (if())
+    - Répétitions : (while())
+    - Alternatives (switch())
+    - Boucles (for())
+
 10. Quelle est la fonction PHP permettant de demander la longueur d’une chaîne de caractères ?
     - strlen()
+
 11. Qu’est-ce qu’une session ? Quelle fonction permet de démarrer une session en PHP ? Donner un exemple d’utilisation en PHP
+    - session_start() permet de démarrer une session en PHP
+    - créer un site d'achat avec un panier dans lequel les achats seraient stockés dans $_SESSION
+
 12. Qu’est-ce qu’un cookie ? Donner un exemple d’utilisation en PHP
+    - 
+
 13. Quelle est la différence entre les instructions « require » et « include » en PHP
+    - 
+
 14. Comment effectuer une redirection en PHP ?
+    - header("Location: location/path.php")
+
 15. Définir la partie « front-end » et « back-end » d’une application
-    - Le front-end c'est ce que l'utilisateur voit, comme le site, et le back-end c'est par exemple l'enregstrement des utilisateurs.
+    - Le front-end c'est ce que l'utilisateur voit, comme le site
+    - Le back-end c'est par exemple l'enregistrement des utilisateurs.
+
 16. Définir le contrôle de version ? Qu’est-ce que Git ?
+    - 
+
 17. Qu’est-ce qu’un CMS ? Citer au moins 2 exemples
-    - permet de créer un site web sans connaissances particulières (ex: Wordpress, ...)
+    - Content Management System, permet de créer un site web sans connaissances particulières en développement web (ex: Wordpress, ...)
 
 ## Front-end
 
 18. Définir HTML
-    - langage permettant de créer des sites web à partir de balises.
+    - Langage permettant de créer des sites web à partir de balises.
+
 19. Définir CSS
-    - permet de mettre le site en page grâce à des propriétés aux balises (couleur, largeur, arrangement)
+    - Permet de mettre le site en page grâce à des propriétés appliquées aux balises (couleur, largeur, arrangement)
+
 20. Définir Javascript
-    - permet plus d'intéractivité (eventListener sur un bouton HTML qui chage le CSS)
+    - Permet plus d'intéractivité grâce à l'exécution de scripts (eventListener sur un bouton HTML qui change le CSS)
+
 21. Définir JSON. Dans quel contexte ce format est-il utilisé ?
-    - c'est un langage de base de données, il peut être utilisé dans de nombreuses situations qui nécessitent une base de données (genre les naissances à l'hôpital, avec le nom, prénom, et date de naissance)
+    - JavaScript Object Notation, c'est un langage de base de données, il peut être utilisé dans de nombreuses situations qui nécessitent une base de données (genre les naissances à l'hôpital, avec nom, prénom, et date de naissance pour chaque personne)
+
 22. Peut-on interpréter du Javascript côté serveur ? Si oui, comment ?
+    - 
+
 23. Qu’est-ce qu’un sélecteur CSS ?
-    - Une classe ou un id
+    - Une classe(ex: .box) ou un id(ex: #container) ou une balise(ex: header)
+
 24. Quelle balise HTML permet de créer un lien hypertexte ?
     - <a></a>
+
 25. Qu’est-ce qu’une requête AJAX ?
+    - 
+
 26. Quel sélecteur CSS permet de sélectionner tous les éléments d’une classe spécifique ? D’un identifiant spécifique ?
+    - ul > : sélectionne les enfants de ul
+    - ul > li : sélectionne tous les li enfants de ul
+
 27. Définir le responsive design
-    - s'adapte au format de l'appareil (pc, téléphone)
+    - Le fait que la disposition et la taille des éléments s'adapte au format de l'appareil (pc, téléphone)
+
 28. Qu’est-ce que le templating ?
-    - Le fait d'avoir une template, c'est-à-dire un squelette, ce qui facilite le travail et le rend plus propre.
+    - Le fait d'avoir une template, c'est-à-dire un bout de code qui sera répêté partout et évitera les répétitions (ex: ob_start() et ob_get_clean() permettent d'"enregistrer" le contenu pour le répêter autre part)
+
 29. Qu’est-ce qu’une fonction anonyme en Javascript ?
+    - 
+
 30. Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?
+    - yourArray.push(eltToPush)
+
 31. Qu’est-ce qu’un « media query » ?
-    - sert en CSS pour le responsive design. Permet de changer le CSS de tel ou tel élément en fonction de la taille du viewport.
+    - Sert en CSS pour le responsive design. Permet de changer le CSS de tel ou tel élément en fonction de la taille du viewport.
+
 32. Qu’est-ce qu’un pseudo élément en CSS ?
+    - 
+
 33. Qu’est-ce que Bootstrap ? Donner d’autres exemples équivalent
-    - bibliothèque CSS (apparemment aussi pour html et js)
+    - Framework CSS qui facilite la mise en page
+
 34. Quand un formulaire HTML est créé, quelles sont les 2 méthodes qui peuvent lui être associées ? Donner la différence entre ces 2 méthodes
+    - action="post" et action="??"
 
 ## UX UI
 
 35. Quelle est la différence entre UX Design et UI Design ?
+    - UX: user experience
+    - UI: user interface
+    - En général une bonne expérience utilisateur passe par une bonne interface utilisateur, qui se doit d'être agréable à l'oeil tout en restant intuitive à utiliser
+
 36. Qu’est-ce qu’un wireframe ?
+    - C'est le "squelette" d'un site, ce n'est pas une maquette complète, mais plutôt une maquette qui désigne l'emplacement des éléments (taille, agencement, ...) sans trop s'attarder sur le style (couleur, police d'écriture, ...)
+
 37. Qu’est-ce qu’un prototype ?
+    - 
+
 38. Qu’est-ce que la hiérarchie visuelle en UI Design ?
+    - 
+
 39. Qu’est-ce que l’accessibilité en UX Design ?
+    - 
+
 40. Qu’est-ce qu’une grille de mise en page ?
+    - 
+
 41. Qu’est-ce que la notion d’affordance en UX Design ?
+    - 
+
 42. Qu’est-ce qu’un « mobile first design » ?
+    - Le fait de commencer la maquette sur un format mobile, afin de s'assurer que les éléments ne sont pas envahissants, contrairement au desktop first, qui pourrait forcer à faire des compromis
+
 
 ## Programmation orientée objet (POO)
 
 43. Donner une définition de la programmation orientée objet
-    - Programmation qui utilise des classes et des objets ce qui permet d'éviter la redondance
+    - Programmation qui utilise des classes et des objets avec héritage et tout, ce qui permet d'éviter la redondance
+
 44. Qu’est-ce qu’une classe ? Comment la déclare-t-on ?
     - class Name{...contenu...}
+
 45. Qu’est-ce qu’un objet ?
     -
+
 46. Définir la notion de propriété / attribut / méthode
     - propriété: zz
     - attribut: les caractéristiques d'un objet (ex: $this->-nom)
     - Méthode:
+
 47. Qu’est-ce que la visibilité d’une propriété ou d’une méthode ? Citer les différents types de visibilité
     - Cela définit son accessibilité
     - public: accessibles à l'intérieur et à l'extérieur de la classe
     - private: accessibles à l'intérieur de la classe uniquement
-    - protected: accessibles à l'intérieur de la classe uniquement ou à l'extérieur grâce à une méthode dérivée (ex: public function callProtected(){
-      $this->protectedMethod();
-      })
+    - protected: accessibles à l'intérieur de la classe uniquement ou à l'extérieur grâce à une méthode dérivée
+    (ex:    public function callProtected(){
+                $this->protectedMethod();
+            })
+
 48. Quelle est la méthode spécifique utilisée pour créer un nouvel objet à partir d’une classe ?
     - $var = new NomObjet(paramètres); (ex: $auteur = new Auteur("Stephen King", "1247-09-21");)
+
 49. Qu’est-ce que l’encapsulation ?
     - Déf: regroupement des méthodes et attributs dans une même classe.
+
 50. Que signifie « étendre une classe » ? Quelle est le concept clé mis en œuvre ? Donner un exemple
     - L'héritage permet de réutiliser des méthodes de la classe mère (class Woman extends Human { ... })
+
 51. Définir l’opérateur de résolution de portée
     -
+
 52. Définir une méthode / propriété statique
     - private static string $_name;
     - public static function functionName(){}
+
 53. Définir le polymorphisme en POO
     - Permet de définir plusieurs versions d'une méthode.
+
 54. Définir une méthode / classe abstraite ?
-    - Une classe plus générale qui est parente d'autres classes dans lesquelles les méthodes de la classe abstraite serotn implémentées.
+    - Une classe plus générale qui est parente d'autres classes dans lesquelles les méthodes de la classe abstraite seront implémentées.
+
 55. Définir le chaînage de méthodes
     -
+
 56. Qu’est-ce que la méthode \_\_toString() ? Existe-t-il d’autres méthodes « magiques »
     - C'est une méthode qui print.(généralement son nom)
+
 57. Qu’est-ce qu’un « autoload » ?
     -
+
 58. Comment appelle-t-on en français les « getters » et les « setters » ?
     - accesseur? Permet de mettre à jour une valeur ou d'aller la chercher.
+
 59. Qu’est-ce que la sérialisation en PHP ?
     -
+
 
 ## Architecture
 
 60. Qu’est-ce que l’architecture client / serveur ? Grâce à quel type de requête peut-on interroger le serveur. Définir l’acronyme de ce type de requête. Si on ajoute un « S » à cet acronyme, expliquer la différence
 61. Donner la définition d’un design pattern. Citer au moins 3 exemples de design pattern
 62. Qu’est-ce que l’architecture MVC ?
+    - MVC : Model - View - Controller
+
 63. Quel est le rôle de chaque couche du design pattern MVC : Model, View, Controller ?
+    - Model: Gestion de la connexion à la BDD et manipulation des données
+    - View: Affichage des données sélectionnées
+    - Controller: Lien entre Model et View, permet d'envoyer des requêtes spécifiques à Model, puis de sélectionner les données à envoyer à View
+
 64. Quels sont les avantages de l’architecture MVC ?
+    - 
+
 65. Existe-t-il des variantes à l’architecture MVC ?
+    - 
+
 66. Qu’est-ce qu’une API ? Définir l’architecture REST
+    - API: Application Programming Interface, en français interface de programmation d'application, sert à créer un lien (interface) en une BDD et l'utilisateur, peut fournir des actions (ex: shuffle() dans une API de jeu de carte)
+    - API REST: 
+
 
 ## Modélisation - Base de données
 
 67. Qu’est-ce que la modélisation de données ? Définir la méthode Merise
+    - La modélisation de données est le fait de définir toutes les données nécessaires, leurs attributs et les liens entre eux afin de faciliter la création de la BDD/des Entity
+    - Méthode Merise: Conceptualisation de la modélisation des données de telle sorte à rendre la communication entre le client et le programmeur plus facile, de par l'utilisation de verbes et de mots pour représenter les données (prose)
+
 68. Quelles sont les 3 étapes principales de la méthode Merise ?
     a. Analyse, conception et réalisation
     b. Planification, exécution et contrôle
     c. Création, modification et suppression
+    
 69. Qu’est-ce qu’un modèle conceptuel de données (MCD) en Merise ?
 70. Qu’est-ce qu’un modèle logique de données (MLD) en Merise ?
 71. Donner la définition des mots suivants :
@@ -237,25 +351,48 @@
 ## SEO
 
 114. Qu’est-ce que le SEO ?
+    - Search Engine Optimization
+
 115. Quel est l’objectif principal du SEO ?
+    - Améliorer le référencement
+
 116. Existe-t-il plusieurs types de référencement ? Lesquels ?
 117. Qu’est-ce que la densité de mots-clés en SEO ?
 118. Qu’est-ce qu’une balise « alt » ?
+    - C'est une balise qui permet d'ajouter une description, notamment à une image, ce qui rendra le site plus accessible aux personnes malvoiyantes qui utiliseraient des narrateurs d'écran
+
 119. Qu’est-ce que la balise « meta description » ?
+    - Elle se situe dans la tête de page et permet de fournir une description fournie mais concise du contenu de la page actuelle
+
 120. Qu’est-ce que le « nofollow » en SEO ?
 121. Quelle est l'importance du contenu de qualité pour le référencement d'un site web ?
+
+
 122. Pourquoi est-il important d'utiliser des balises de titre (h1, h2, h3, etc.) de manière structurée ?
+    - Car les titres sont utilisés dans le SEO, mieux vaut mettre "Site de recettes de cuisine" en h1 que "Ingrédients: ", car le site sera mieux référencé en tant que site de cuisine
+
 123. Quelle est la recommandation pour les URL d'un site web bien référencé ?
 124. Qu'est-ce que le maillage interne et pourquoi est-il important pour le référencement ?
 125. Qu'est-ce que l'optimisation des images pour le référencement ?
+    - Privilégier des images "web friendly", comme webp ou jfif a png et jpg permet d'accélérer le chargement de la page, et par conséquent d'améliorer le "score" SEO
+
 126. Qu'est-ce qu'un plan de site (sitemap) et pourquoi est-il important pour le référencement ?
+    - Cela peut être une page du site ou bien un fichier texte, qui décrit l'architecture du site (l'agencement des pages) et qui permet d'indexer les pages, améliorant la SEO
 
 ## Gestion de projets - DevOps
 
 127. Qu’est-ce que la gestion de projet ?
 128. Qu’est-ce qu’une méthode Agile de gestion de projet ?
 129. Expliquer la méthode MoSCoW en quelques lignes et citer ses avantages
+    - Mo : Must have
+    - S : Should have
+    - Co : Could have
+    - W : Won't have
+    - Permet d'optimiser le travail en déterminant les fonctionnalités sur lesquelles travailler en premier (vues) avant le reste (style)
+
 130. A quoi sert la méthodologie MVP ? Citer les caractéristiques clés
+    - MVP : Minimum Viable Product, ce dont le site a besoin pour fonctionner, et c'est tout (rentre dans la partie Must have de la méthode MoSCoW)
+
 131. Qu’est-ce que la planification itérative ?
 132. Citer 3 méthodes Agiles dans le cadre d’un projet informatique
 133. Qu’est-ce qu’une réunion de revue de projet ?
@@ -304,4 +441,4 @@
 8. Which of the following is a characteristic of NoSQL databases ?
    a. Strict schema enforcement
    b. Support for complex transactions
-   c. Scalability and flexible data models
+   c. Scalability and flexible data models X

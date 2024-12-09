@@ -42,17 +42,51 @@
     - null (rien)
 
 8. Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
-   - Il y a les tableaux simples, avec seulement des valeurs => array(10, 12, 8) et les tableaux associant une valeur à une clé array => ["Mickaël" => "FRA", "Virgile" => "ESP"]
+   - Il y a les tableaux simples, avec seulement des valeurs:
+        ```php
+        array(10, 12, 8)
+        ```
+   - Et les tableaux associant une valeur à une clé:
+        ```php
+        array => ["Mickaël" => "FRA", "Virgile" => "ESP"];
+        ```
 
 9. Quelles sont les différentes structures de contrôles qu’il existe en algorithmie ? Donner un exemple pour chacune d’entre elles
     - Séquences : (bloc de code?)
-    - Sélections : (if())
-    - Répétitions : (while())
-    - Alternatives (switch())
-    - Boucles (for())
+    - Sélections :
+        ```php
+        if($condition) {
+            // action
+        }
+        ```
+    - Répétitions :
+        ```php
+        while($condition) {
+            // action
+        }
+        ```
+    - Alternatives
+        ```php
+        switch($valeur) {
+            case 0:
+                echo "!!";
+                break;
+            case 1:
+                echo "??";
+                break;
+            default:
+                echo "!?"
+        }
+        ```
+    - Boucles
+        ```php
+        for($i = 0; $i < 10; i++) {
+            // action
+        }
+        ```
 
 10. Quelle est la fonction PHP permettant de demander la longueur d’une chaîne de caractères ?
-    - strlen()
+    - strlen($array)
 
 11. Qu’est-ce qu’une session ? Quelle fonction permet de démarrer une session en PHP ? Donner un exemple d’utilisation en PHP
     - session_start() permet de démarrer une session en PHP
@@ -92,7 +126,7 @@
     - JavaScript Object Notation, c'est un langage de base de données, il peut être utilisé dans de nombreuses situations qui nécessitent une base de données (genre les naissances à l'hôpital, avec nom, prénom, et date de naissance pour chaque personne)
 
 22. Peut-on interpréter du Javascript côté serveur ? Si oui, comment ?
-    - 
+    - Oui c'est possible. Node.js rend ça possible.
 
 23. Qu’est-ce qu’un sélecteur CSS ?
     - Une classe(ex: .box) ou un id(ex: #container) ou une balise(ex: header)
@@ -101,7 +135,7 @@
     - <a></a>
 
 25. Qu’est-ce qu’une requête AJAX ?
-    - 
+    - AJAX: Asynchronous JavaScript and XML => Déf web: méthode de communication entre un navigateur web et un serveur web qui permet de récupérer des données dynamiques sans recharger complètement la page web
 
 26. Quel sélecteur CSS permet de sélectionner tous les éléments d’une classe spécifique ? D’un identifiant spécifique ?
     - ul > : sélectionne les enfants de ul
@@ -114,7 +148,7 @@
     - Le fait d'avoir une template, c'est-à-dire un bout de code qui sera répêté partout et évitera les répétitions (ex: ob_start() et ob_get_clean() permettent d'"enregistrer" le contenu pour le répêter autre part)
 
 29. Qu’est-ce qu’une fonction anonyme en Javascript ?
-    - 
+    - fonction sans nom (ex: const addFunc = (a, b) => a + b;)
 
 30. Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?
     - yourArray.push(eltToPush)
@@ -123,10 +157,15 @@
     - Sert en CSS pour le responsive design. Permet de changer le CSS de tel ou tel élément en fonction de la taille du viewport.
 
 32. Qu’est-ce qu’un pseudo élément en CSS ?
-    - 
+    - déf web: élément virtuel qui est ajouté à un sélecteur CSS pour styliser une partie spécifique d’un élément HTML
+        - ::before => ajouter du contenu avant l'élément ciblé
+        - ::after =>    ''    ''   ''    après   ''       ''
+        - ::first-line => styliser la première ligne d'un bloc de texte
+        - ::first-letter => styliser la première lettre d'un bloc de texte
 
 33. Qu’est-ce que Bootstrap ? Donner d’autres exemples équivalent
     - Framework CSS qui facilite la mise en page
+    - Tailwind CSS est aussi un framework CSS qui facilite la mise en style
 
 34. Quand un formulaire HTML est créé, quelles sont les 2 méthodes qui peuvent lui être associées ? Donner la différence entre ces 2 méthodes
     - action="post" et action="??"
@@ -148,13 +187,15 @@
     - 
 
 39. Qu’est-ce que l’accessibilité en UX Design ?
-    - 
+    - C'est le fait de prendre à garde à ce que tout le site soit utilisable et compréensible par tout le monde, quels que puissent être leurs handicaps (daltonisme, ?malvoiyance?).
+    - Il faut donc faire attention à, par exemple, rendre la couleur du texte facile à lire par rapport à l'arrière plan
 
 40. Qu’est-ce qu’une grille de mise en page ?
     - 
 
 41. Qu’est-ce que la notion d’affordance en UX Design ?
-    - 
+    - Le fait de suggérer des actions à l'utilisateur sans qu'il ait besoin de comprendre le fonctionnement du site (ex: changement de curseur au survol, contraste)
+    - Contribue à l'UX dans la mesure où même un utilisateur nouveau pourra utiliser le site normalement
 
 42. Qu’est-ce qu’un « mobile first design » ?
     - Le fait de commencer la maquette sur un format mobile, afin de s'assurer que les éléments ne sont pas envahissants, contrairement au desktop first, qui pourrait forcer à faire des compromis
@@ -166,61 +207,105 @@
     - Programmation qui utilise des classes et des objets avec héritage et tout, ce qui permet d'éviter la redondance
 
 44. Qu’est-ce qu’une classe ? Comment la déclare-t-on ?
+    - Ensemble d'attributs (ex: prix, modèle) et de fonctions (ex: addPrice(int $price)) qui permettent d'instancier un objet possédant ces attributs et fonctions 
     - class Name{...contenu...}
 
 45. Qu’est-ce qu’un objet ?
-    -
+    - Instance d'une classe (ex: Student $student Ici $student est une instance de la classe Student et possède toutes ses attributs et fonctions)
 
 46. Définir la notion de propriété / attribut / méthode
     - propriété: zz
-    - attribut: les caractéristiques d'un objet (ex: $this->-nom)
-    - Méthode:
+    - attribut: les caractéristiques d'un objet
+        Exemple:
+        ```php
+        private $nom;
+        private $prix;
+        private $kilometrage = 0;
+        ```
+    - Méthode: Une fonction
+        Exemple: 
+        ```php
+        public function addPrice(int $price): void
+        {
+            $this->price += $price;
+        }
+        ```
 
 47. Qu’est-ce que la visibilité d’une propriété ou d’une méthode ? Citer les différents types de visibilité
     - Cela définit son accessibilité
     - public: accessibles à l'intérieur et à l'extérieur de la classe
     - private: accessibles à l'intérieur de la classe uniquement
     - protected: accessibles à l'intérieur de la classe uniquement ou à l'extérieur grâce à une méthode dérivée
-    (ex:    public function callProtected(){
-                $this->protectedMethod();
-            })
+        Exemple:
+        ```php
+        public function callProtected() {
+            $this->protectedMethod();
+        }
+        ```
 
 48. Quelle est la méthode spécifique utilisée pour créer un nouvel objet à partir d’une classe ?
-    - $var = new NomObjet(paramètres); (ex: $auteur = new Auteur("Stephen King", "1247-09-21");)
+    - $var = new NomObjet(paramètres);
+        Exemple:
+        ```php
+        $auteur = new Auteur("Stephen King", "1247-09-21");
+        ```
+        Dans ce cas-là, la classe auteur contient un constructeur qui requiert deux paramètres: des strings correspondant aux attributs $nom et $dateNaissance
 
 49. Qu’est-ce que l’encapsulation ?
     - Déf: regroupement des méthodes et attributs dans une même classe.
 
 50. Que signifie « étendre une classe » ? Quelle est le concept clé mis en œuvre ? Donner un exemple
-    - L'héritage permet de réutiliser des méthodes de la classe mère (class Woman extends Human { ... })
+    - Étendre une classe, c'est le fait de la réutiliser pour une autre classe, par héritage
+    - L'héritage permet de réutiliser des méthodes de la classe mère <br>
+        Exemple:
+        ```php
+        class Enemy extends NPC {
+            // contenu de la classe
+        }
+        ```
 
 51. Définir l’opérateur de résolution de portée
     -
 
 52. Définir une méthode / propriété statique
-    - private static string $_name;
     - public static function functionName(){}
+    - private static string $_name;
 
 53. Définir le polymorphisme en POO
-    - Permet de définir plusieurs versions d'une méthode.
+    - Permet de définir plusieurs versions d'une méthode, pour remplir des buts différents
 
 54. Définir une méthode / classe abstraite ?
-    - Une classe plus générale qui est parente d'autres classes dans lesquelles les méthodes de la classe abstraite seront implémentées.
+    - Une classe plus générale qui est parente d'autres classes dans lesquelles ses méthodes seront implémentées.
 
 55. Définir le chaînage de méthodes
-    -
+    - Permet d'accéder à des infos pas disponibles directement
+        Exemple:
+        ```php
+        // Dans ce cas-là, l'attribut $voiture de User est de type Voiture, c-à-d que c'est une instance d'un autre objet, qui possède un getter pour son attribut $nom
+
+        $user = new User;
+
+        $nomVoitureUser = $user->getVoiture()->getNom();
+        ```
 
 56. Qu’est-ce que la méthode \_\_toString() ? Existe-t-il d’autres méthodes « magiques »
-    - C'est une méthode qui print.(généralement son nom)
+    - C'est une méthode qui renvoie ce qu'on lui demande de renvoyer pour éviter les redondances
+        Exemple:
+        ```php
+        public function __toString() {
+            return($this->prenom . " " . $this->nom);
+        }
+        ```
+        Et alors il sera préférable d'appeler le __toString que de concaténer $prenom et $nomplein de fois
 
 57. Qu’est-ce qu’un « autoload » ?
-    -
+    - 
 
 58. Comment appelle-t-on en français les « getters » et les « setters » ?
     - accesseur? Permet de mettre à jour une valeur ou d'aller la chercher.
 
 59. Qu’est-ce que la sérialisation en PHP ?
-    -
+    - 
 
 
 ## Architecture
@@ -259,17 +344,20 @@
     
 69. Qu’est-ce qu’un modèle conceptuel de données (MCD) en Merise ?
 70. Qu’est-ce qu’un modèle logique de données (MLD) en Merise ?
-71. Donner la définition des mots suivants :
-    a. Entité
-    b. Relation
-    c. Cardinalité
-    d. Clé primaire / clé étrangère
+71. Donner la définition des mots suivants : <br>
+    a. Entité: ... <br>
+    b. Relation: ... <br>
+    c. Cardinalité: ... <br>
+    d. Clé primaire / clé étrangère: elt unique de l'entité qui permet de l'identifier / id d'une autre entité, qui fait le lien entre les deux entités 
 72. Que devient une relation de type « Many To Many » dans le modèle logique de données ?
+    - Elle génère une entité entre les deux entités, contenant au moins leurs clés, afin de les lier
 73. Qu’est-ce qu’une base de données ?
+    - Stockage des données des différentes entités, qui permet un accès et stockage
+
 74. Définir les notions suivantes :
-    a. SQL
-    b. MySQL
-    c. SGBD (donner 2 exemples de SGBD)
+    a. SQL: Structured Query Language, peut effectuer des recherches spécifiques dans les BDD
+    b. MySQL: Système de hestion de BDD, basé sur SQL
+    c. SGBD (donner 2 exemples de SGBD): 
 75. Dans une base de données, les données sont stockées dans des **_. Celles-ci sont constituées de lignes appelées _** et de colonnes appelées \_\_\_
 76. Quelle est la différence entre une base de données relationnelle et non relationnelle ?
 77. Qu’est-ce qu’une jointure dans une base de données ? En existe-t-il plusieurs ? Si oui lesquelles ?

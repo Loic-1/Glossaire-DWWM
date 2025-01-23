@@ -457,7 +457,7 @@
 
 
 126. Pourquoi est-il important d'utiliser des balises de titre (h1, h2, h3, etc.) de manière structurée ?
-     - Car les titres sont utilisés dans le SEO, mieux vaut mettre "Site de recettes de cuisine" en h1 que "Ingrédients: ", car le site sera mieux référencé en tant que site de cuisine
+     - Car les titres sont utilisés dans le SEO, mieux vaut mettre "Site de recettes de cuisine" en <h1> que "Ingrédients: ", car le site sera mieux référencé en tant que site de cuisine
 
 128. Quelle est la recommandation pour les URL d'un site web bien référencé ?
 129. Qu'est-ce que le maillage interne et pourquoi est-il important pour le référencement ?

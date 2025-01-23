@@ -399,7 +399,7 @@
 96. Qu’est-ce que la faille XSS ? Comment s’en prémunir ?
     - XSS: Cross Site Scripting, le fait d'éxecuter du script dans le site
     - ex: uploader un fichier en .js qui contient 'window.alert("buh")' puis y accéder par l'url
-    - Comment s'en prémunir: filtrer les uploads de fichiers (que .png ou .jpeg), casser les inputs (< devient &lt; et > devient &gt;)
+    - Comment s'en prémunir: filtrer les uploads de fichiers (que .png ou .jpeg), casser les inputs (< devient \&lt; et > devient \&gt;)
 98. Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
     - Cross Site Request Forgery
 100. Définir l’attaque par force brute et l’attaque par dictionnaire

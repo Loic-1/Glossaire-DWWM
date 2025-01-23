@@ -500,7 +500,7 @@
 ## English
 
 1. What does JavaScript enable you to do on a website ?
-   a. <u><strong>Add interactive behavior and dynamic content</strong></u>
+   a. <span style="text-decoration: underline;"><strong>Add interactive behavior and dynamic content</strong><span>
    b. Define the layout and design of web pages
    c. Handle server-side operations
 2. Which programming language is primarily used for server-side web development ?

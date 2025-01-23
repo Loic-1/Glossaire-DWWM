@@ -407,8 +407,8 @@
 102. A quoi servent l’authentification et l’autorisation dans un contexte d’application web ?
 103.  Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
 104.  Qu’est-ce qu’une politique de mots de passe forts ?
-     - Au moins 12 caractères, des minuscules, des majuscules, des chiffres et des caractères spéciaux
-      <img src="h9yd2ong8nua1.png" style="height: 800px;">
+     - Au moins 12 caractères, des minuscules, des majuscules, des chiffres et des caractères spéciaux </br>
+      <img src="h9yd2ong8nua1.png" style="height: 600px;">
 
 106.  Qu’est-ce que l’hameçonnage ?
      - L'envoi d'un lien (ex: par mail) renvoyant vers une page, un logiciel récupérant les infos de l'utilisateur

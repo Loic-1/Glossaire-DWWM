@@ -395,10 +395,11 @@
     - Le fait d'écrire du SQL dans une zone de texte mal sécurisée pour récupérer des infos non accessibles normalement
     - ex: (SELECT email, password FROM users)
     - ex: ('1=1' & SELECT...)
-    - Comment s'en prévenir: Utiliser des requ^étes pré-faites sauvegardées en fonctions pour empêcher leur accès aux utilisateurs
+    - Comment s'en prévenir: Utiliser des requêtes pré-faites sauvegardées en fonctions pour empêcher leur accès aux utilisateurs
 96. Qu’est-ce que la faille XSS ? Comment s’en prémunir ?
     - XSS: Cross Site Scripting, le fait d'éxecuter du script dans le site
     - ex: uploader un fichier en .js qui contient 'window.alert("buh")' puis y accéder par l'url
+    - Comment s'en prémunir: filtrer les uploads de fichiers (que .png ou .jpeg), casser les inputs (< devient &lt; et > devient &gt;)
 98. Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
     - Cross Site Request Forgery
 100. Définir l’attaque par force brute et l’attaque par dictionnaire
@@ -448,12 +449,12 @@
      - Search Engine Optimization
 
 116. Quel est l’objectif principal du SEO ?
-     - Améliorer le référencement
+     - Améliorer le référencement, pour augmenter son 'rang' dans les résultats de recherche
 
 118. Existe-t-il plusieurs types de référencement ? Lesquels ?
 119. Qu’est-ce que la densité de mots-clés en SEO ?
 120. Qu’est-ce qu’une balise « alt » ?
-     - C'est une balise qui permet d'ajouter une description, notamment à une image, ce qui rendra le site plus accessible aux personnes malvoiyantes qui utiliseraient des narrateurs d'écran
+     - C'est une balise qui permet d'ajouter une description, notamment à une image, ce qui rendra le site plus accessible aux personnes malvoyantes qui utiliseraient des narrateurs d'écran
 
 122. Qu’est-ce que la balise « meta description » ?
      - Elle se situe dans la tête de page et permet de fournir une description fournie mais concise du contenu de la page actuelle

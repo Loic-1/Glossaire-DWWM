@@ -407,10 +407,11 @@
 102. A quoi servent l’authentification et l’autorisation dans un contexte d’application web ?
 103.  Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
 104.  Qu’est-ce qu’une politique de mots de passe forts ?
-105.  Qu’est-ce que l’hameçonnage ?
+     - Au moins 12 caractères, des minuscules, des majuscules, des chiffres et des caractères spéciaux
+      (image)[h9yd2ong8nua1.png]
 
-
-    - envoyer un mail frauduleux qui contient des fichiers malveillants à télécharger
+106.  Qu’est-ce que l’hameçonnage ?
+     - L'envoi d'un lien (ex: par mail) renvoyant vers une page, un logiciel récupérant les infos de l'utilisateur
 
 103. Définir la « validation des entrées »
 
@@ -438,15 +439,13 @@
          - Détournement de la finalité des données personnelles : un tel détournement a lieu lorsque l’entreprise collectant les données des personnes pour un objectif précis (par exemple la fidéliser des clients) et emploie également ces données pour une autre finalité (études statistiques). Les sanctions pénales auxquelles s’expose l’entreprise sont de 5 ans d’emprisonnement et 300 000 € d’amende.
 
 108. En France, quel est l’autorité administrative qui s’occupe de faire appliquer le RGPD ?
+     - La Commission Nationale de l’Informatique et des Libertés (CNIL)
 
-
-    - ANSEE
-
-109. Quel est le consentement valide selon le RPGD ?
-110. Qu’est-ce qu’une politique de confidentialité ?
-111. Quelle est la durée de conservation maximale des données personnelles selon le RGPD ?
-112. Quels sont les droits des utilisateurs selon le RGPD ?
-113. Qu’est-ce que le principe de minimisation des données selon le RGPD ?
+110. Quel est le consentement valide selon le RPGD ?
+111. Qu’est-ce qu’une politique de confidentialité ?
+112. Quelle est la durée de conservation maximale des données personnelles selon le RGPD ?
+113. Quels sont les droits des utilisateurs selon le RGPD ?
+114. Qu’est-ce que le principe de minimisation des données selon le RGPD ?
 
 ## SEO
 

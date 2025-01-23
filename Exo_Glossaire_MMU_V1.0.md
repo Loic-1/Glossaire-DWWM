@@ -472,27 +472,28 @@
 127. Qu’est-ce que la gestion de projet ?
 128. Qu’est-ce qu’une méthode Agile de gestion de projet ?
 129. Expliquer la méthode MoSCoW en quelques lignes et citer ses avantages
-    - Mo : Must have
-    - S : Should have
-    - Co : Could have
-    - W : Won't have
-    - Permet d'optimiser le travail en déterminant les fonctionnalités sur lesquelles travailler en premier (vues) avant le reste (style)
+     - Mo : Must have
+     - S : Should have
+     - Co : Could have
+     - W : Won't have
+     - Permet d'optimiser le travail en déterminant les fonctionnalités sur lesquelles travailler en premier (vues) avant le reste (style)
 
-130. A quoi sert la méthodologie MVP ? Citer les caractéristiques clés
-    - MVP : Minimum Viable Product, ce dont le site a besoin pour fonctionner, et c'est tout (rentre dans la partie Must have de la méthode MoSCoW)
+131. A quoi sert la méthodologie MVP ? Citer les caractéristiques clés
+     - MVP : Minimum Viable Product, ce dont le site a besoin pour fonctionner, et c'est tout (rentre dans la partie Must have de la méthode MoSCoW)
+     - Permet donc de déterminer le minimum nécessaire pour avoir un site fonctionnel (et même présentable, dans le cadre de notre projet de fin d'année)
 
-131. Qu’est-ce que la planification itérative ?
-132. Citer 3 méthodes Agiles dans le cadre d’un projet informatique
-133. Qu’est-ce qu’une réunion de revue de projet ?
-134. Qu’est-ce qu’un livrable dans un projet ?
-135. Quels sont les 3 piliers SCRUM ? Définir chacun d’entre eux
-136. Qu’est-ce que le DevOps et quel est son objectif principal ?
-137. Qu’est-ce que l’intégration continue ?
-138. Qu’est-ce que Docker ? Et en quoi est-il utile dans le cadre du DevOps ?
-139. Qu’est-ce qu’un test unitaire ?
-140. Quelle est l'unité de code testée lors d'un test unitaire ?
-141. Quelles sont les caractéristiques d'un bon test unitaire ?
-142. Qu'est-ce qu'une assertion dans un test unitaire ?
+133. Qu’est-ce que la planification itérative ?
+134. Citer 3 méthodes Agiles dans le cadre d’un projet informatique
+135. Qu’est-ce qu’une réunion de revue de projet ?
+136. Qu’est-ce qu’un livrable dans un projet ?
+137. Quels sont les 3 piliers SCRUM ? Définir chacun d’entre eux
+138. Qu’est-ce que le DevOps et quel est son objectif principal ?
+139. Qu’est-ce que l’intégration continue ?
+140. Qu’est-ce que Docker ? Et en quoi est-il utile dans le cadre du DevOps ?
+141. Qu’est-ce qu’un test unitaire ?
+142. Quelle est l'unité de code testée lors d'un test unitaire ?
+143. Quelles sont les caractéristiques d'un bon test unitaire ?
+144. Qu'est-ce qu'une assertion dans un test unitaire ?
 
 
 

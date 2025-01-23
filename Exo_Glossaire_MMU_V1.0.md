@@ -504,30 +504,30 @@
    - Define the layout and design of web pages
    - Handle server-side operations
 3. Which programming language is primarily used for server-side web development ?
-   - <strong>PHP X</strong>
+   - <strong>PHP</strong>
    - JavaScript
    - HTML
 5. What is the purpose of a web browser ?
-   - <strong>To render and display web pages X</strong>
+   - <strong>To render and display web pages</strong>
    - To execute serve-side code
    - To manage databases
 7. What is the difference between GET and POST methods in HTTP ?
-   - <strong>GET retrieves data from a server, while POST submits data to a server X</strong>
+   - <strong>GET retrieves data from a server, while POST submits data to a server</strong>
    - GET submits data to a server, while POST retrieves data from a server
    - GET and POST methods are interchangeable
 9. What is the purpose of version control systems (e.g., Git) in web development ?
-    - <strong>To track changes and manage collaborative development X</strong>
+    - <strong>To track changes and manage collaborative development</strong>
     - To optimize website loading speed
     - To handle server-side scripting
 11. What is the purpose of a framework in web development ?
     - To provide a structured environment for building web applications
-    - <strong>To handle network protocols and data transfer X</strong>
+    - <strong>To handle network protocols and data transfer</strong>
     - To create visual designs and layouts for websites
 13. What does NoSQL stand for ?
-    - <strong>Not Only SQL X</strong>
+    - <strong>Not Only SQL</strong>
     - Non-Structured Query Language
     - New Object-Oriented Language
 15. Which of the following is a characteristic of NoSQL databases ?
     - Strict schema enforcement
     - Support for complex transaction
-    - <strong>Scalability and flexible data models X</strong>
+    - <strong>Scalability and flexible data models</strong>

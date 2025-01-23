@@ -417,14 +417,14 @@
 ## RGPD
 
 104. Qu’est-ce que le RGPD ?
+     - Règlement Général de la Protection des Données
+     - Règlement de l'Union européenne en matière de protection des données personnelles
 
-
-    - règlement général de la protectino des données
-
-105. Quel est son objectif principal ?
-
-
-    - protéger les données privées des utilisateurs
+106. Quel est son objectif principal ?
+     - Protéger les données privées des utilisateurs
+     - Renforcer les droits des citoyens
+     - Uniformiser de la réglementation en UE
+     - Responsabiliser les entreprises
 
 106. Quelle est la date d’entrée en vigueur du RGPD ?
 107. Quelles sont les sanctions possibles en cas de non-respect du RGPD ?

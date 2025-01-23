@@ -427,10 +427,15 @@
      - Responsabiliser les entreprises
 
 106. Quelle est la date d’entrée en vigueur du RGPD ?
-107. Quelles sont les sanctions possibles en cas de non-respect du RGPD ?
+     - 25 mai 2018
 
-
-    - amendes? prison?
+108. Quelles sont les sanctions possibles en cas de non-respect du RGPD ?
+     - Jusqu’à 10 millions d’euros ou 2% du chiffre d’affaires mondial pour des manquements relatifs à la mise en conformité.
+     - Jusqu’à 20 millions d’euros ou 4% du chiffre d’affaires mondial pour des manquements relatifs aux droits des personnes.
+     - Mais il existe également des sanctions pénales prévues par le Code pénal en France. En voici quelques exemples :
+       - Absence d’information des personnes concernées : Il s’agit du cas où, au moment de la collecte des données, vous n’informez pas la personne concernée de cette collecte. Par exemple, lors de la prospection commerciale, il faut informer la personne concernée que vous collectez ses données personnelles. En cas de non-respect de cette obligation, l’entreprise s’expose à une amende de 1 500€ pour chaque infraction.
+        - Non-respect des droits des personnes : C’est le cas lorsque l’entreprise qui collecte des données ne répond pas à une personne qui demande la rectification de ses données personnelles ou l’effacement de celles-ci. De même, l’entreprise risque une amende de 1 500€ pour chaque infraction.
+Détournement de la finalité des données personnelles : un tel détournement a lieu lorsque l’entreprise collectant les données des personnes pour un objectif précis (par exemple la fidéliser des clients) et emploie également ces données pour une autre finalité (études statistiques). Les sanctions pénales auxquelles s’expose l’entreprise sont de 5 ans d’emprisonnement et 300 000 € d’amende.
 
 108. En France, quel est l’autorité administrative qui s’occupe de faire appliquer le RGPD ?
 

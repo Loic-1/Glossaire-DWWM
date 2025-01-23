@@ -456,8 +456,12 @@
      - Améliorer le référencement, pour augmenter son 'rang' dans les résultats de recherche
 
 118. Existe-t-il plusieurs types de référencement ? Lesquels ?
-119. Qu’est-ce que la densité de mots-clés en SEO ?
-120. Qu’est-ce qu’une balise « alt » ?
+     - Référencement naturel (SEO)
+     - Référencement payant (SEA)
+     - Référencement social (SMO)
+     - Référencement mobile (SMA)
+120. Qu’est-ce que la densité de mots-clés en SEO ?
+121. Qu’est-ce qu’une balise « alt » ?
      - C'est une balise qui permet d'ajouter une description, notamment à une image, ce qui rendra le site plus accessible aux personnes malvoyantes qui utiliseraient des narrateurs d'écran
 
 122. Qu’est-ce que la balise « meta description » ?

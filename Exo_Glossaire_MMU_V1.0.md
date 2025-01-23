@@ -393,16 +393,20 @@
 
 94. Qu’est-ce que l’injection SQL ? Comment s’en prémunir ?
     - Le fait d'écrire du SQL dans une zone de texte mal sécurisée pour récupérer des infos non accessibles normalement
-    ex: (SELECT email, password FROM users)
-    ex: ('1=1' & SELECT...)
+    - ex: (SELECT email, password FROM users)
+    - ex: ('1=1' & SELECT...)
+    - Comment s'en prévenir: Utiliser des requ^étes pré-faites sauvegardées en fonctions pour empêcher leur accès aux utilisateurs
 96. Qu’est-ce que la faille XSS ? Comment s’en prémunir ?
-97. Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
-98. Définir l’attaque par force brute et l’attaque par dictionnaire
-99. Existe-t-il d’autres failles de sécurité ? Citer celles-ci et expliquer simplement leur comportement
-100. A quoi servent l’authentification et l’autorisation dans un contexte d’application web ?
-101.  Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
-102.  Qu’est-ce qu’une politique de mots de passe forts ?
-103.  Qu’est-ce que l’hameçonnage ?
+    - XSS: Cross Site Scripting, le fait d'éxecuter du script dans le site
+    - ex: uploader un fichier en .js qui contient 'window.alert("buh")' puis y accéder par l'url
+98. Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
+    - Cross Site Request Forgery
+100. Définir l’attaque par force brute et l’attaque par dictionnaire
+101. Existe-t-il d’autres failles de sécurité ? Citer celles-ci et expliquer simplement leur comportement
+102. A quoi servent l’authentification et l’autorisation dans un contexte d’application web ?
+103.  Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
+104.  Qu’est-ce qu’une politique de mots de passe forts ?
+105.  Qu’est-ce que l’hameçonnage ?
 
 
     - envoyer un mail frauduleux qui contient des fichiers malveillants à télécharger

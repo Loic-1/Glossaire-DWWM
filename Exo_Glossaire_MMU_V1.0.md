@@ -158,10 +158,10 @@
 
 32. Qu’est-ce qu’un pseudo élément en CSS ?
     - déf web: élément virtuel qui est ajouté à un sélecteur CSS pour styliser une partie spécifique d’un élément HTML
-        - ::before => ajouter du contenu avant l'élément ciblé
-        - ::after =>    ''    ''   ''    après   ''       ''
-        - ::first-line => styliser la première ligne d'un bloc de texte
-        - ::first-letter => styliser la première lettre d'un bloc de texte
+        - ::before => [crée un pseudo-élément qui sera le premier enfant de l'élément ciblé](https://developer.mozilla.org/fr/docs/Web/CSS/::before)
+        - ::after => [crée un pseudo-élément qui sera le dernier enfant de l'élément sélectionné](https://developer.mozilla.org/fr/docs/Web/CSS/::after)
+        - ::first-line => [styliser la première ligne d'un bloc de texte](https://developer.mozilla.org/fr/docs/Web/CSS/::first-line)
+        - ::first-letter => [styliser la première lettre d'un bloc de texte](https://developer.mozilla.org/fr/docs/Web/CSS/::first-letter)
 
 33. Qu’est-ce que Bootstrap ? Donner d’autres exemples équivalent
     - Framework CSS qui facilite la mise en page

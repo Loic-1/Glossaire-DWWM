@@ -447,25 +447,25 @@
 118. Existe-t-il plusieurs types de référencement ? Lesquels ?
 119. Qu’est-ce que la densité de mots-clés en SEO ?
 120. Qu’est-ce qu’une balise « alt » ?
-    - C'est une balise qui permet d'ajouter une description, notamment à une image, ce qui rendra le site plus accessible aux personnes malvoiyantes qui utiliseraient des narrateurs d'écran
+     - C'est une balise qui permet d'ajouter une description, notamment à une image, ce qui rendra le site plus accessible aux personnes malvoiyantes qui utiliseraient des narrateurs d'écran
 
-121. Qu’est-ce que la balise « meta description » ?
-    - Elle se situe dans la tête de page et permet de fournir une description fournie mais concise du contenu de la page actuelle
+122. Qu’est-ce que la balise « meta description » ?
+     - Elle se situe dans la tête de page et permet de fournir une description fournie mais concise du contenu de la page actuelle
 
-122. Qu’est-ce que le « nofollow » en SEO ?
-123. Quelle est l'importance du contenu de qualité pour le référencement d'un site web ?
+124. Qu’est-ce que le « nofollow » en SEO ?
+125. Quelle est l'importance du contenu de qualité pour le référencement d'un site web ?
 
 
-124. Pourquoi est-il important d'utiliser des balises de titre (h1, h2, h3, etc.) de manière structurée ?
-    - Car les titres sont utilisés dans le SEO, mieux vaut mettre "Site de recettes de cuisine" en h1 que "Ingrédients: ", car le site sera mieux référencé en tant que site de cuisine
+126. Pourquoi est-il important d'utiliser des balises de titre (h1, h2, h3, etc.) de manière structurée ?
+     - Car les titres sont utilisés dans le SEO, mieux vaut mettre "Site de recettes de cuisine" en h1 que "Ingrédients: ", car le site sera mieux référencé en tant que site de cuisine
 
-125. Quelle est la recommandation pour les URL d'un site web bien référencé ?
-126. Qu'est-ce que le maillage interne et pourquoi est-il important pour le référencement ?
-127. Qu'est-ce que l'optimisation des images pour le référencement ?
-    - Privilégier des images "web friendly", comme webp ou jfif a png et jpg permet d'accélérer le chargement de la page, et par conséquent d'améliorer le "score" SEO
+128. Quelle est la recommandation pour les URL d'un site web bien référencé ?
+129. Qu'est-ce que le maillage interne et pourquoi est-il important pour le référencement ?
+130. Qu'est-ce que l'optimisation des images pour le référencement ?
+     - Privilégier des images "web friendly", comme webp ou jfif a png et jpg permet d'accélérer le chargement de la page, et par conséquent d'améliorer le "score" SEO
 
-128. Qu'est-ce qu'un plan de site (sitemap) et pourquoi est-il important pour le référencement ?
-    - Cela peut être une page du site ou bien un fichier texte, qui décrit l'architecture du site (l'agencement des pages) et qui permet d'indexer les pages, améliorant la SEO
+132. Qu'est-ce qu'un plan de site (sitemap) et pourquoi est-il important pour le référencement ?
+     - Cela peut être une page du site ou bien un fichier texte, qui décrit l'architecture du site (l'agencement des pages) et qui permet d'indexer les pages, améliorant la SEO
 
 ## Gestion de projets - DevOps
 

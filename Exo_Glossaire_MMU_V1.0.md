@@ -132,7 +132,7 @@
     - Une classe(ex: .box) ou un id(ex: #container) ou une balise(ex: header)
 
 24. Quelle balise HTML permet de créer un lien hypertexte ?
-    - <a></a>
+    - &lt;a&gt;texte du lien&lt;/a&gt;
 
 25. Qu’est-ce qu’une requête AJAX ?
     - AJAX: Asynchronous JavaScript and XML => Déf web: méthode de communication entre un navigateur web et un serveur web qui permet de récupérer des données dynamiques sans recharger complètement la page web

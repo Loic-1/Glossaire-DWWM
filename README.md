@@ -486,17 +486,17 @@ Il en existe plusieurs types : INNER JOIN, LEFT JOIN, RIGHT JOIN, et FULL JOIN.
 
 - En PHP, on se connecte à une base de données avec la classe native PDO (PHP Data Objects). Exemple de connexion :
   ```php
-      <?php
-      // Se connecter à la base de données
-      $pdo = new PDO('mysql:host=localhost;dbname=ma_base', 'utilisateur', 'motdepasse');
-      
-      // Vérifier la connexion
-      if ($pdo) {
-          echo "Connexion réussie!";
-      } else {
-          echo "Échec de la connexion!";
-      }
-      ?>
+   <?php
+   // Se connecter à la base de données
+   $pdo = new PDO('mysql:host=localhost;dbname=ma_base', 'utilisateur', 'motdepasse');
+   
+   // Vérifier la connexion
+   if ($pdo) {
+       echo "Connexion réussie!";
+   } else {
+       echo "Échec de la connexion!";
+   }
+   ?>
    ```
 
 ## Symfony

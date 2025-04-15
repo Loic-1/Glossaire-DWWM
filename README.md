@@ -141,7 +141,7 @@
 
 20. Définir Javascript
 
-    - Permet plus d'intéractivité grâce à l'exécution de scripts (eventListener sur un bouton HTML qui change le CSS)
+    - Permet plus d'interactivité grâce à l'exécution de scripts (eventListener sur un bouton HTML qui change le CSS)
 
 21. Définir JSON. Dans quel contexte ce format est-il utilisé ?
 
@@ -157,7 +157,7 @@
 
 24. Quelle balise HTML permet de créer un lien hypertexte ?
 
-    - &lt;a&gt;texte du lien&lt;/a&gt;
+    - &lt;a href="[LIEN]"&gt;[TEXTE DU LIEN]&lt;/a&gt;
 
 25. Qu’est-ce qu’une requête AJAX ?
 
@@ -218,11 +218,12 @@
 
 37. Qu’est-ce qu’un prototype ?
 
-    -
+    - Un prototype en UX/UI est une version interactive ou statique d'une interface destinée à tester et valider des idées de design. Il
+permet de simuler l'expérience utilisateur avant le développement final.
 
 38. Qu’est-ce que la hiérarchie visuelle en UI Design ?
 
-    -
+    - La hiérarchie visuelle en UI Design organise les éléments d'une interface pour guider l’attention de l’utilisateur. Elle utilise la taille, la couleur, l’espacement et la disposition pour prioriser l'information.
 
 39. Qu’est-ce que l’accessibilité en UX Design ?
 
@@ -231,7 +232,7 @@
 
 40. Qu’est-ce qu’une grille de mise en page ?
 
-    -
+    - Une grille de mise en page est un système de lignes verticales et horizontales qui structure et aligne les éléments d’une interface. Elle aide à créer de la cohérence, de l’équilibre et une bonne lisibilité.
 
 41. Qu’est-ce que la notion d’affordance en UX Design ?
 
@@ -314,20 +315,22 @@
 
 51. ## Définir l’opérateur de résolution de portée
 
-52. Définir une méthode / propriété statique
+    - L’opérateur de résolution de portée (::) en POO permet d’accéder à des membres statiques, des constantes ou des méthodes d’une classe sans instancier celle-ci. ex: MaClasse::MA_CONSTANTE.
+
+53. Définir une méthode / propriété statique
 
     - public static function functionName(){}
     - private static string $\_name;
 
-53. Définir le polymorphisme en POO
+54. Définir le polymorphisme en POO
 
     - Permet de définir plusieurs versions d'une méthode, pour remplir des buts différents
 
-54. Définir une méthode / classe abstraite ?
+55. Définir une méthode / classe abstraite ?
 
     - Une classe plus générale qui est parente d'autres classes dans lesquelles ses méthodes seront implémentées.
 
-55. Définir le chaînage de méthodes
+56. Définir le chaînage de méthodes
 
     - Permet d'accéder à des infos pas disponibles directement
       Exemple:
@@ -340,7 +343,7 @@
       $nomVoitureUser = $user->getVoiture()->getNom();
       ```
 
-56. Qu’est-ce que la méthode \_\_toString() ? Existe-t-il d’autres méthodes « magiques »
+57. Qu’est-ce que la méthode \_\_toString() ? Existe-t-il d’autres méthodes « magiques »
 
     - C'est une méthode qui renvoie ce qu'on lui demande de renvoyer pour éviter les redondances
       Exemple:
@@ -351,20 +354,31 @@
       ```
       Et alors il sera préférable d'appeler le \_\_toString que de concaténer $prenom et $nomplein de fois
 
-57. Qu’est-ce qu’un « autoload » ?
+58. Qu’est-ce qu’un « autoload » ?
 
-    -
+    - Un autoload permet de charger automatiquement les classes PHP quand elles sont utilisées, sans avoir à faire de require manuel. Il facilite la gestion et l’organisation du code, surtout avec des namespaces.
 
-58. Comment appelle-t-on en français les « getters » et les « setters » ?
+59. Comment appelle-t-on en français les « getters » et les « setters » ?
 
     - accesseur? Permet de mettre à jour une valeur ou d'aller la chercher.
 
-59. ## Qu’est-ce que la sérialisation en PHP ?
+60. ## Qu’est-ce que la sérialisation en PHP ?
+
+    - La sérialisation en PHP convertit une variable (comme un objet ou un tableau) en une chaîne de caractères. Cela permet de la stocker ou la transmettre facilement, puis de la restaurer avec unserialize().
 
 ## Architecture
 
 60. Qu’est-ce que l’architecture client / serveur ? Grâce à quel type de requête peut-on interroger le serveur. Définir l’acronyme de ce type de requête. Si on ajoute un « S » à cet acronyme, expliquer la différence
+
+- L’architecture client/serveur sépare les rôles : le client envoie des requêtes, le serveur y répond.
+On interroge le serveur via des requêtes HTTP (HyperText Transfer Protocol).
+Avec un « S » (HTTPS), les échanges sont sécurisés grâce au chiffrement SSL/TLS.
+
 61. Donner la définition d’un design pattern. Citer au moins 3 exemples de design pattern
+
+- Un design pattern est une solution réutilisable à un problème courant de conception logicielle.
+Exemples : Singleton, Observer, Factory.
+
 62. Qu’est-ce que l’architecture MVC ?
 
     - MVC : Model - View - Controller
@@ -377,13 +391,14 @@
 
 64. Quels sont les avantages de l’architecture MVC ?
 
-    -
+    - L’architecture MVC sépare les responsabilités (Modèle, Vue, Contrôleur), facilitant la maintenance et les tests. Elle améliore aussi la réutilisabilité et la collaboration entre développeurs et designers.
 
 65. Existe-t-il des variantes à l’architecture MVC ?
 
-    -
+    - Oui, il existe des variantes comme MVVM (Model-View-ViewModel), MVP (Model-View-Presenter), et MVU (Model-View-Update), chacune adaptée à différents types d'applications et frameworks.
 
 66. Qu’est-ce qu’une API ? Définir l’architecture REST
+    
     - API: Application Programming Interface, en français interface de programmation d'application, sert à créer un lien (interface) en une BDD et l'utilisateur, peut fournir des actions (ex: shuffle() dans une API de jeu de carte)
     - API REST:
 
@@ -395,34 +410,69 @@
     - Méthode Merise: Conceptualisation de la modélisation des données de telle sorte à rendre la communication entre le client et le programmeur plus facile, de par l'utilisation de verbes et de mots pour représenter les données (prose)
 
 68. Quelles sont les 3 étapes principales de la méthode Merise ?
+    
     a. Analyse, conception et réalisation
     b. Planification, exécution et contrôle
     c. Création, modification et suppression
-69. Qu’est-ce qu’un modèle conceptuel de données (MCD) en Merise ?
-70. Qu’est-ce qu’un modèle logique de données (MLD) en Merise ?
-71. Donner la définition des mots suivants : <br>
+    
+70. Qu’est-ce qu’un modèle conceptuel de données (MCD) en Merise ?
+
+- Un modèle conceptuel de données (MCD) en Merise est une représentation graphique des données et de leurs relations dans un système, sans tenir compte des aspects techniques. Il sert à définir la structure de la base de données de manière abstraite.
+    
+72. Qu’est-ce qu’un modèle logique de données (MLD) en Merise ?
+
+- Le modèle logique de données (MLD) en Merise est une traduction du MCD en termes techniques, en vue de la création d’une base de données relationnelle. Il précise les tables, les clés primaires et les relations entre les entités.
+
+73. Donner la définition des mots suivants : <br>
+
     a. Entité: ... <br>
     b. Relation: ... <br>
     c. Cardinalité: ... <br>
     d. Clé primaire / clé étrangère: elt unique de l'entité qui permet de l'identifier / id d'une autre entité, qui fait le lien entre les deux entités
-72. Que devient une relation de type « Many To Many » dans le modèle logique de données ?
+    
+75. Que devient une relation de type « Many To Many » dans le modèle logique de données ?
+    
     - Elle génère une entité entre les deux entités, contenant au moins leurs clés, afin de les lier
-73. Qu’est-ce qu’une base de données ?
+      
+77. Qu’est-ce qu’une base de données ?
 
     - Stockage des données des différentes entités, qui permet un accès et stockage
 
-74. Définir les notions suivantes :
+78. Définir les notions suivantes :
+    
     a. SQL: Structured Query Language, peut effectuer des recherches spécifiques dans les BDD
     b. MySQL: Système de hestion de BDD, basé sur SQL
     c. SGBD (donner 2 exemples de SGBD):
-75. Dans une base de données, les données sont stockées dans des **_. Celles-ci sont constituées de lignes appelées _** et de colonnes appelées \_\_\_
-76. Quelle est la différence entre une base de données relationnelle et non relationnelle ?
-77. Qu’est-ce qu’une jointure dans une base de données ? En existe-t-il plusieurs ? Si oui lesquelles ?
-78. A quoi sert une vue dans une base de données ?
-79. Qu’est-ce que l’intégrité référentielle dans une base de données ?
-80. Quelles sont les fonctions d’agrégation en SQL ?
-81. Qu’est-ce qu’un CRUD dans le contexte d’une base de données ?
-82. Quelles sont les clauses qui permettent de :
+    
+80. Dans une base de données, les données sont stockées dans des **_. Celles-ci sont constituées de lignes appelées _** et de colonnes appelées \_\_\_
+    
+82. Quelle est la différence entre une base de données relationnelle et non relationnelle ?
+    
+    - Une base de données relationnelle utilise des tables avec des relations structurées entre elles, tandis qu'une base de données non relationnelle (NoSQL) stocke des données de manière plus flexible, souvent sous forme de documents, de paires clé-valeur ou de graphes.
+      
+84. Qu’est-ce qu’une jointure dans une base de données ? En existe-t-il plusieurs ? Si oui lesquelles ?
+    
+    - Une jointure dans une base de données permet de combiner des données de plusieurs tables en fonction d'une condition commune.
+Il en existe plusieurs types : INNER JOIN, LEFT JOIN, RIGHT JOIN, et FULL JOIN.
+
+86. A quoi sert une vue dans une base de données ?
+
+- Une vue dans une base de données est une requête enregistrée qui permet d'afficher des données issues de plusieurs tables, sans modifier la structure de la base. Elle simplifie l'accès aux informations complexes et sécurise les données sensibles.
+
+87. Qu’est-ce que l’intégrité référentielle dans une base de données ?
+
+- L'intégrité référentielle garantit que les relations entre les tables restent cohérentes, en assurant que les clés étrangères pointent vers des enregistrements valides dans les tables référencées. Elle empêche la suppression ou la modification de données liées de manière invalide.
+
+88. Quelles sont les fonctions d’agrégation en SQL ?
+
+- Les fonctions d'agrégation en SQL permettent de calculer des valeurs résumées sur un ensemble de données. Les principales sont : COUNT(), SUM(), AVG(), MIN(), et MAX().
+
+89. Qu’est-ce qu’un CRUD dans le contexte d’une base de données ?
+
+- Un CRUD représente les quatre opérations de base pour manipuler les données dans une base de données : Create (ajouter), Read (lire), Update (mettre à jour), et Delete (supprimer).
+
+90. Quelles sont les clauses qui permettent de :
+
     a. Insérer un nouvel enregistrement dans une table
     b. Modifier un enregistrement dans une table
     c. Supprimer un enregistrement dans une table
@@ -431,7 +481,13 @@
     f. Trier les résultats d’une requête SELECT
     g. Regrouper les résultats d'une requête SELECT en fonction d'une colonne spécifique
     h. Concaténer 2 chaînes de caractères
-83. Comment se connecter à une base de données en PHP ? Quelle est la classe native utilisée ?
+
+92. Comment se connecter à une base de données en PHP ? Quelle est la classe native utilisée ?
+
+- En PHP, on se connecte à une base de données avec la classe native PDO (PHP Data Objects). Exemple de connexion :
+  ```php
+$pdo = new PDO('mysql:host=localhost;dbname=ma_base', 'utilisateur', 'motdepasse');
+  ````
 
 ## Symfony
 

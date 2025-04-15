@@ -105,7 +105,8 @@
 
 12. Qu’est-ce qu’un cookie ? Donner un exemple d’utilisation en PHP
 
-    -
+    - Un cookie est un petit fichier stocké sur le navigateur de l'utilisateur pour conserver des données entre les sessions.
+      ex: setcookie("user", "Alice", time() + 3600);
 
 13. Quelle est la différence entre les instructions « require » et « include » en PHP
 

@@ -485,7 +485,7 @@ Il en existe plusieurs types : INNER JOIN, LEFT JOIN, RIGHT JOIN, et FULL JOIN.
 92. Comment se connecter à une base de données en PHP ? Quelle est la classe native utilisée ?
 
 - En PHP, on se connecte à une base de données avec la classe native PDO (PHP Data Objects). Exemple de connexion :
-  ```php
+  ````php
 $pdo = new PDO('mysql:host=localhost;dbname=ma_base', 'utilisateur', 'motdepasse');
   ````
 

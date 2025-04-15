@@ -502,45 +502,116 @@ Il en existe plusieurs types : INNER JOIN, LEFT JOIN, RIGHT JOIN, et FULL JOIN.
 ## Symfony
 
 84. Qu’est-ce que Symfony ?
+
+- Symfony est un framework PHP open-source pour le développement d'applications web. Il fournit des outils et des composants réutilisables, permettant de créer des applications robustes et évolutives en suivant les bonnes pratiques de développement.
+
 85. Sur quel langage de programmation et design pattern repose Symfony ?
+
+- Symfony repose sur le langage de programmation PHP et utilise principalement le design pattern MVC (Model-View-Controller) pour structurer les applications web. Il fait également usage de nombreux autres design patterns, comme Dependency Injection et Event Dispatcher.
+
 86. Quelle est la dernière version en date de Symfony ?
+
+- ​La dernière version stable de Symfony est la 7.2, publiée en novembre 2024. Elle est actuellement maintenue et nécessite PHP 8.2 ou une version supérieure. La version 7.2.4, la plus récente en date, a été publiée en février 2025.
+
 87. Qu’est-ce qu’un bundle ?
+
+- Un bundle dans Symfony est un ensemble de fonctionnalités ou de composants réutilisables qui peuvent être intégrés dans une application Symfony. Il contient généralement des contrôleurs, des services, des configurations, des vues et des ressources pour ajouter une fonctionnalité spécifique à l'application, comme la gestion des utilisateurs ou l'intégration de services tiers.
+
 88. Quel est le moteur de template utilisé par défaut dans Symfony ?
+
+- Le moteur de template utilisé par défaut dans Symfony est Twig. C'est un moteur de template flexible et sécurisé, qui permet de séparer la logique de présentation du code PHP.
+
 89. Qu’est-ce qu’un ORM ? Quel est son utilité et comment s’appelle-t-il au sein de Symfony ?
+
+- Un ORM (Object-Relational Mapping) est une technique qui permet de mapper des objets en langage de programmation orienté objet avec des tables de base de données relationnelle. Son utilité est de simplifier l'interaction avec la base de données en manipulant des objets plutôt que des requêtes SQL.
+
+Dans Symfony, l'ORM utilisé par défaut est Doctrine. Il permet de gérer facilement les entités (objets) et leurs relations avec les tables de la base de données.
+
 90. Qu’est-ce que l’injection de dépendances ? Quel est l’outil utilisé dans ce contexte et quel fichier contient l’intégralité des dépendances du projet ?
+
+- L'injection de dépendances permet de fournir des services à une classe au lieu de les créer à l'intérieur. Dans Symfony, cela se fait via le Service Container, et les dépendances sont configurées principalement dans le fichier services.yaml.
+
 91. Que permet le bundle Maker au sein de Symfony ?
+
+- Le bundle Maker dans Symfony permet de générer rapidement des classes, des contrôleurs, des formulaires, des entités, etc., en utilisant des commandes en ligne. Cela facilite le développement en automatisant la création de code de base.
+
 92. Quel est le langage de requêtage exploité au sein d’un projet Symfony ?
+
+- Le langage de requêtage utilisé au sein d'un projet Symfony est DQL (Doctrine Query Language), qui est propre à Doctrine ORM. DQL permet de rédiger des requêtes orientées objet pour interagir avec la base de données de manière abstraite.
+
 93. Quel est le composant qui garantit l’authentification et l’autorisation des utilisateurs ?
+
+- Le composant qui garantit l'authentification et l'autorisation des utilisateurs dans Symfony est Security. Il gère les mécanismes de sécurité, comme l'authentification, la gestion des rôles et des permissions des utilisateurs.
 
 ## Sécurité
 
 94. Qu’est-ce que l’injection SQL ? Comment s’en prémunir ?
+
     - Le fait d'écrire du SQL dans une zone de texte mal sécurisée pour récupérer des infos non accessibles normalement
     - ex: (SELECT email, password FROM users)
     - ex: ('1=1' & SELECT...)
     - Comment s'en prévenir: Utiliser des requêtes pré-faites sauvegardées en fonctions pour empêcher leur accès aux utilisateurs
-95. Qu’est-ce que la faille XSS ? Comment s’en prémunir ?
+
+96. Qu’est-ce que la faille XSS ? Comment s’en prémunir ?
+
     - XSS: Cross Site Scripting, le fait d'éxecuter du script dans le site
     - ex: uploader un fichier en .js qui contient 'window.alert("buh")' puis y accéder par l'url
     - Comment s'en prémunir: filtrer les uploads de fichiers (que .png ou .jpeg), casser les inputs (< devient '\&lt;' et > devient '\&gt;')
-96. Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
-    - Cross Site Request Forgery
-97. Définir l’attaque par force brute et l’attaque par dictionnaire
-98. Existe-t-il d’autres failles de sécurité ? Citer celles-ci et expliquer simplement leur comportement
-99. A quoi servent l’authentification et l’autorisation dans un contexte d’application web ?
-100.  Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
-101.  Qu’est-ce qu’une politique de mots de passe forts ?
 
+97. Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
+
+    - La faille CSRF (Cross-Site Request Forgery) permet à un attaquant d'envoyer des requêtes malveillantes au nom d'un utilisateur authentifié, en exploitant la confiance du site envers cet utilisateur.
+
+Pour s'en prémunir, Symfony utilise un token CSRF dans les formulaires. Ce token est un identifiant unique qui doit être validé à chaque soumission de formulaire pour s'assurer que la requête provient bien de l'utilisateur légitime.
+
+98. Définir l’attaque par force brute et l’attaque par dictionnaire
+
+- L'attaque par force brute consiste à essayer toutes les combinaisons possibles de mots de passe jusqu'à trouver le bon. Elle est généralement lente et nécessite de nombreuses tentatives.
+
+L'attaque par dictionnaire utilise une liste précompilée de mots courants ou de mots de passe fréquemment utilisés pour tenter de deviner un mot de passe, étant plus rapide que l'attaque par force brute mais moins exhaustive.
+
+99. Existe-t-il d’autres failles de sécurité ? Citer celles-ci et expliquer simplement leur comportement
+
+- Oui, il existe plusieurs autres failles de sécurité, parmi lesquelles :
+
+Injection SQL : L'attaquant insère du code SQL malveillant dans une requête pour manipuler la base de données, voler ou supprimer des données.
+
+XSS (Cross-Site Scripting) : L'attaquant injecte du code JavaScript malveillant dans une page web visitée par d'autres utilisateurs, permettant de voler des informations ou d'exécuter des actions non autorisées.
+
+Inclusion de fichier distant (RFI) : L'attaquant exploite une vulnérabilité pour inclure un fichier distant malveillant dans une application, compromettant ainsi la sécurité du serveur.
+
+Réutilisation de session (Session Hijacking) : L'attaquant vole un identifiant de session valide pour usurper l'identité d'un utilisateur et accéder à ses informations privées.
+
+Man-in-the-middle (MITM) : L'attaquant intercepte et potentiellement modifie les communications entre un client et un serveur, souvent pour voler des informations sensibles.
+
+Chacune de ces failles peut être évitée par des bonnes pratiques de codage, des mécanismes de validation des données, ainsi que des protocoles de sécurité comme HTTPS.
+
+100. A quoi servent l’authentification et l’autorisation dans un contexte d’application web ?
+
+- L'authentification permet de vérifier l'identité d'un utilisateur, généralement via un nom d'utilisateur et un mot de passe, pour s'assurer qu'il est bien celui qu'il prétend être.
+L'autorisation détermine les actions ou ressources auxquelles l'utilisateur authentifié a accès, en fonction de ses rôles ou permissions.
+
+101.  Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
+
+- Le hachage d'un mot de passe est un procédé qui transforme le mot de passe en une valeur fixe de longueur déterminée, généralement sous forme de chaîne de caractères, de manière irréversible. Cela permet de stocker de manière sécurisée le mot de passe sans le conserver en clair.
+
+Des exemples d'algorithmes de hachage sont
+- SHA256
+- bcrypt
+- Argon2
+
+102.  Qu’est-ce qu’une politique de mots de passe forts ?
 
      - Au moins 12 caractères, des minuscules, des majuscules, des chiffres et des caractères spéciaux </br>
       <img src="h9yd2ong8nua1.png" style="height: 600px;">
 
 106.  Qu’est-ce que l’hameçonnage ?
 
-
      - L'envoi d'un lien (ex: par mail) renvoyant vers une page, un logiciel récupérant les infos de l'utilisateur
 
 103. Définir la « validation des entrées »
+
+- La validation des entrées consiste à vérifier que les données reçues d'un utilisateur ou d'une source externe respectent un format, une structure et des critères définis avant d'être utilisées par l'application. Cela permet de prévenir les erreurs, les attaques (comme les injections) et d'assurer l'intégrité des données traitées.
 
 ## RGPD
 
@@ -574,10 +645,36 @@ Il en existe plusieurs types : INNER JOIN, LEFT JOIN, RIGHT JOIN, et FULL JOIN.
      - La Commission Nationale de l’Informatique et des Libertés (CNIL)
 
 109. Quel est le consentement valide selon le RPGD ?
+
+- Le consentement valide selon le RGPD doit être donné de manière libre, spécifique, éclairée et univoque, généralement par une action affirmative. Il doit aussi être rétractable à tout moment.
+
 110. Qu’est-ce qu’une politique de confidentialité ?
+
+- Une politique de confidentialité est un document qui explique comment une entreprise collecte, utilise, protège et partage les données personnelles des utilisateurs. Elle informe les utilisateurs de leurs droits et des mesures de sécurité mises en place pour protéger leurs informations.
+
 111. Quelle est la durée de conservation maximale des données personnelles selon le RGPD ?
+
+- Il n'y a pas de valeur fixe. Selon le RGPD, les données personnelles doivent être conservées pendant une durée n'excédant pas celle nécessaire aux finalités pour lesquelles elles sont traitées. La durée exacte dépend de la nature des données et de leur utilisation, mais elle doit être justifiée par l'objectif du traitement.
+
 112. Quels sont les droits des utilisateurs selon le RGPD ?
+
+- Droit d'accès : Accéder aux données personnelles collectées à leur sujet.
+
+- Droit de rectification : Corriger des données personnelles inexactes ou incomplètes.
+
+- Droit à l'effacement (droit à l'oubli) : Demander la suppression de leurs données sous certaines conditions.
+
+- Droit à la limitation du traitement : Restreindre le traitement de leurs données dans certains cas.
+
+- Droit à la portabilité des données : Récupérer leurs données dans un format structuré pour les transférer à un autre service.
+
+- Droit d'opposition : S'opposer au traitement de leurs données, notamment pour des fins de marketing direct.
+
+- Droit de ne pas faire l'objet d'une décision automatisée : Refuser des décisions basées uniquement sur des traitements automatisés, comme le profilage.
+
 113. Qu’est-ce que le principe de minimisation des données selon le RGPD ?
+
+- Le principe de minimisation des données selon le RGPD stipule que seules les données personnelles nécessaires à la réalisation des objectifs du traitement doivent être collectées. Cela signifie qu'il ne faut pas collecter plus de données que ce qui est strictement nécessaire pour accomplir une tâche spécifique.
 
 ## SEO
 
@@ -590,47 +687,64 @@ Il en existe plusieurs types : INNER JOIN, LEFT JOIN, RIGHT JOIN, et FULL JOIN.
      - Améliorer le référencement, pour augmenter son 'rang' dans les résultats de recherche
 
 116. Existe-t-il plusieurs types de référencement ? Lesquels ?
-     - Référencement naturel (SEO): site classé en fonstion de si il est bien structuré
+
+      - Référencement naturel (SEO): site classé en fonstion de si il est bien structuré
      - Référencement payant (SEA): visibilité accrue en payant (sur Google l'intitulé 'Sponsorisé')
      - Référencement social (SMO): visibilité accrue par la présence sur les réseaux sociaux
      - Référencement mobile (SMA): visibilité accrue en fonction de si le site est responsive pour mobile
-117. Qu’est-ce que la densité de mots-clés en SEO ?
+
+118. Qu’est-ce que la densité de mots-clés en SEO ?
+
      - Le nombre d'occurences d'un mot par rapport au nombre total de mots
      - Une densité de mots clés située entre 1% et 4% est jugée acceptable, en dessous trop peu et au dessus du bourrage
-118. Qu’est-ce qu’une balise « alt » ?
+
+119. Qu’est-ce qu’une balise « alt » ?
 
      - C'est une balise qui permet d'ajouter une description, notamment à une image, ce qui rendra le site plus accessible aux personnes malvoyantes qui utiliseraient des narrateurs d'écran
 
-119. Qu’est-ce que la balise « meta description » ?
+120. Qu’est-ce que la balise « meta description » ?
 
      - Elle se situe dans la tête de page et permet de fournir une description fournie mais concise du contenu de la page actuelle
 
-120. Qu’est-ce que le « nofollow » en SEO ?
+121. Qu’est-ce que le « nofollow » en SEO ?
 
      - C'est un lien possédant l'attribut rel=nofollow qui indique aux robots de référencement de ne pas suivre ce lien
      - Empêche les liens sortants de distribuer du SEO aux sites de destination
 
-121. Quelle est l'importance du contenu de qualité pour le référencement d'un site web ?
+122. Quelle est l'importance du contenu de qualité pour le référencement d'un site web ?
 
-     -
+     - Le contenu de qualité est essentiel pour le référencement (SEO) d'un site web car il améliore l'expérience utilisateur, favorise l'engagement et augmente la probabilité que le site soit bien classé par les moteurs de recherche. Un contenu pertinent, bien structuré et optimisé pour des mots-clés spécifiques permet d'attirer davantage de visiteurs et d'améliorer la visibilité du site.
 
-122. Pourquoi est-il important d'utiliser des balises de titre (h1, h2, h3, etc.) de manière structurée ?
+123. Pourquoi est-il important d'utiliser des balises de titre (h1, h2, h3, etc.) de manière structurée ?
 
      - Car les titres sont utilisés dans le SEO, mieux vaut mettre "Site de recettes de cuisine" en &lt;h1&gt; que "Ingrédients: ", car le site sera mieux référencé en tant que site de cuisine
 
-123. Quelle est la recommandation pour les URL d'un site web bien référencé ?
-124. Qu'est-ce que le maillage interne et pourquoi est-il important pour le référencement ?
-125. Qu'est-ce que l'optimisation des images pour le référencement ?
+124. Quelle est la recommandation pour les URL d'un site web bien référencé ?
+
+- Pour un site web bien référencé, les URL doivent être courtes, descriptives, et contenir des mots-clés pertinents. Elles doivent être facilement compréhensibles par les utilisateurs et les moteurs de recherche, en utilisant des tirets pour séparer les mots (plutôt que des underscores) et éviter les caractères spéciaux ou les paramètres complexes.
+
+125. Qu'est-ce que le maillage interne et pourquoi est-il important pour le référencement ?
+
+- Le maillage interne consiste à relier les pages d'un même site web entre elles via des liens. Il est important pour le référencement car il aide les moteurs de recherche à explorer et indexer le site plus efficacement, tout en améliorant l'expérience utilisateur en facilitant la navigation et l'accès à du contenu pertinent.
+
+126. Qu'est-ce que l'optimisation des images pour le référencement ?
 
      - Privilégier des images "web friendly", comme webp ou jfif a png et jpg permet d'accélérer le chargement de la page, et par conséquent d'améliorer le "score" SEO
 
-126. Qu'est-ce qu'un plan de site (sitemap) et pourquoi est-il important pour le référencement ?
-     - Cela peut être une page du site ou bien un fichier texte, qui décrit l'architecture du site (l'agencement des pages) et qui permet d'indexer les pages, améliorant la SEO
+127. Qu'est-ce qu'un plan de site (sitemap) et pourquoi est-il important pour le référencement ?
+
+      - Cela peut être une page du site ou bien un fichier texte, qui décrit l'architecture du site (l'agencement des pages) et qui permet d'indexer les pages, améliorant la SEO
 
 ## Gestion de projets - DevOps
 
 127. Qu’est-ce que la gestion de projet ?
+
+- La gestion de projet consiste à planifier, organiser, diriger et contrôler les ressources et les activités pour atteindre les objectifs d'un projet dans les délais, le budget et la qualité définis. Cela inclut la gestion des risques, des parties prenantes, et des contraintes pour garantir la réussite du projet.
+
 128. Qu’est-ce qu’une méthode Agile de gestion de projet ?
+
+- La méthode Agile de gestion de projet est une approche flexible et itérative qui privilégie la collaboration, l'adaptation continue et la livraison fréquente de petites portions de produit. Elle se concentre sur l'amélioration continue, la réactivité aux changements et la satisfaction des utilisateurs finaux.
+
 129. Expliquer la méthode MoSCoW en quelques lignes et citer ses avantages
 
      - Mo : Must have
@@ -645,17 +759,63 @@ Il en existe plusieurs types : INNER JOIN, LEFT JOIN, RIGHT JOIN, et FULL JOIN.
      - Permet donc de déterminer le minimum nécessaire pour avoir un site fonctionnel (et même présentable, dans le cadre de notre projet de fin d'année)
 
 131. Qu’est-ce que la planification itérative ?
+
+- La planification itérative est une approche de gestion de projet où le travail est divisé en petites étapes (itérations) qui permettent de réévaluer et ajuster les objectifs, les priorités et les ressources à chaque cycle. Cela permet une meilleure flexibilité et réactivité face aux changements tout en livrant régulièrement des résultats tangibles.
+
 132. Citer 3 méthodes Agiles dans le cadre d’un projet informatique
+
+- Scrum
+- Kanban
+- Extreme Programming (XP)
+
 133. Qu’est-ce qu’une réunion de revue de projet ?
+
+- Une réunion de revue de projet est un point de contrôle où l’équipe examine les progrès réalisés, discute des défis rencontrés et ajuste les plans si nécessaire. Elle permet d'assurer que le projet reste sur la bonne voie et de s'assurer que les objectifs sont toujours alignés avec les attentes des parties prenantes.
+
 134. Qu’est-ce qu’un livrable dans un projet ?
+
+- Un livrable dans un projet est un produit ou résultat tangible, spécifiquement défini et mesurable, qui doit être livré à la fin d'une phase ou du projet. Cela peut être un document, un rapport, une fonctionnalité ou tout autre élément concret attendu par les parties prenantes.
+
 135. Quels sont les 3 piliers SCRUM ? Définir chacun d’entre eux
+
+1. Transparence : Toutes les informations importantes doivent être visibles et accessibles à tous les membres de l'équipe et parties prenantes. Cela garantit une compréhension commune du travail effectué et des problèmes rencontrés.
+
+2. Inspection : L'équipe doit régulièrement examiner le travail effectué et les processus pour identifier les éventuels écarts par rapport aux objectifs et apporter les ajustements nécessaires.
+
+3. Adaptation : En fonction des résultats des inspections, l'équipe ajuste ses méthodes, ses priorités ou ses processus pour améliorer continuellement la qualité et l'efficacité du projet.
+
+
 136. Qu’est-ce que le DevOps et quel est son objectif principal ?
+
+- Le DevOps est une approche qui vise à intégrer les équipes de développement (Dev) et d'exploitation (Ops) pour améliorer la collaboration, l'automatisation et la livraison continue des logiciels. Son objectif principal est d'accélérer le cycle de développement tout en garantissant la qualité, la fiabilité et la rapidité des mises en production.
+
 137. Qu’est-ce que l’intégration continue ?
+
+- L'intégration continue (CI) est une pratique de développement où les développeurs intègrent régulièrement leur code dans un dépôt partagé, souvent plusieurs fois par jour. Cela permet de détecter rapidement les erreurs, d'automatiser les tests et d'assurer la qualité du code tout au long du processus de développement.
+
 138. Qu’est-ce que Docker ? Et en quoi est-il utile dans le cadre du DevOps ?
+
+- Docker est une plateforme qui permet de déployer des applications dans des conteneurs, garantissant une exécution cohérente sur différents environnements. Dans le cadre du DevOps, il facilite l'intégration continue et la livraison continue en assurant la portabilité et la standardisation des environnements de développement et de production.
+
 139. Qu’est-ce qu’un test unitaire ?
+
+- Un test unitaire est un type de test logiciel qui vérifie le bon fonctionnement d'une petite unité de code, généralement une fonction ou une méthode, de manière isolée. L'objectif est de s'assurer que chaque composant fonctionne comme prévu, indépendamment des autres parties du système.
+
 140. Quelle est l'unité de code testée lors d'un test unitaire ?
+
+- L'unité de code testée lors d'un test unitaire est généralement une fonction ou une méthode. C'est la plus petite partie du code qui peut être testée de manière indépendante pour vérifier qu'elle se comporte comme attendu.
+
 141. Quelles sont les caractéristiques d'un bon test unitaire ?
+
+1. Indépendant : Chaque test doit être isolé, ne dépendre d'aucun autre test et pouvoir être exécuté séparément.
+2. Rapide : Le test doit être exécuté rapidement pour ne pas ralentir le cycle de développement.
+3. Prédictible : Le résultat du test doit être le même à chaque exécution, dans les mêmes conditions.
+4. Couvrant : Il doit tester toutes les situations possibles, y compris les cas limites et les erreurs.
+5. Lisible : Le test doit être facile à comprendre et à maintenir.
+
 142. Qu'est-ce qu'une assertion dans un test unitaire ?
+
+- Une assertion dans un test unitaire est une vérification qui compare le résultat obtenu d'un morceau de code avec le résultat attendu. Si l'assertion échoue, le test unitaire est considéré comme défaillant, indiquant que le comportement du code testé ne correspond pas à ce qui était prévu.
 
 ## English
 
